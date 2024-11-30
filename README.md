@@ -1,3 +1,3 @@
 # Weather api
 
-[go to site](https://digi-weather-api.netlify.app)
+[go to site](https://digi-get-weather.netlify.app)
