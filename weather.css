@@ -1,0 +1,291 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+:root{
+    --bg-white :#f8f8f8
+}
+body{
+    height: 100vh;
+}
+hr{
+    margin: 10px 0;
+    width: 93%;
+    height: 6px;
+    border: none;
+    background: #f73991;
+    border-radius: 10px;
+}
+.container{
+   display: flex;
+   align-items: center;
+}
+.main1{
+    width: 30%;
+    position: fixed;
+    inset: 0;
+    /* background: linear-gradient(45deg,#f44b38,#dfd025); */
+    /* background: linear-gradient(45deg, #3874f4a1, #9825df5c); */
+    /* background: linear-gradient(45deg, #f49a38a1, #9825df5c); */
+    background: linear-gradient(45deg, #6838f463, #25df705c);
+    border-radius: 25px;
+    margin: 1rem 1.5rem;
+    padding: 1rem 2.5rem;
+}
+.inputEle{
+    width: 93%;
+    padding: 1rem;
+    padding-right: .3rem;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    background-color: var(--bg-white);
+    border-radius: 10px;
+}
+.inputEle input{
+    height: 2rem;
+    background: transparent;
+    font-size: 1.5rem;
+    width: 80%;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    padding-left: 1rem;
+}
+.inputEle select{
+    background-color: var(--bg-white);
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+}
+
+.inputEle span{
+    cursor: pointer;
+}
+.inputEle span svg{
+    width: 30px;  
+    margin: 0 10px;
+}
+.weatherIcon{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 8rem;
+    height: 8rem;
+    text-align: center;
+    font-size: 3.5rem;
+}
+.weatherIcon img{
+    width: 100%;
+    height: 100%;
+}
+.details div,
+.city{
+    font-size: 160%;
+    font-weight: 500;
+}
+.details .feelLikes{
+    font-size: 175%;
+    font-weight: 500;
+}
+.details .temperature{
+    font-size: 300%;
+    font-weight: 600;
+}
+.details{
+    line-height: 1.4;
+}
+.main2{
+    float: left;
+    margin-left: 32%;
+    width: 100%;
+}
+.main2 .heading{
+    margin: 1.5rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.main2 .heading span{
+    width: 30px;
+    height: 30px;
+}
+.highlight{
+    margin: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.box,
+.boxForcast{
+    height: 250px;
+    /* background: aqua; */
+    padding: .5rem 1rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    background: linear-gradient(45deg, #3874f4a1, #9825df5c);
+}
+.forecast{
+    margin: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.forecast .boxForecast,
+.day .box{
+    padding: .25rem .5rem;
+    font-size: 90%;
+}
+.forecast .box div{
+    width: 70px;
+    height: 70px;
+}
+.forecast .boxForcast div img{
+    width: 100%;
+    height: 100%;
+}
+.box svg{
+    margin: .2rem;
+    height: 75px;
+    padding: 5px;
+}
+.box h4{
+    font-size: 1.5rem;
+}
+.sunsr div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 1rem;
+    margin-top: .8rem;
+}
+.sunsr div svg{
+    width: 50%;
+    margin: 0;
+}
+
+.sunsr div p{
+    width: 50%;
+    line-height: 2.1rem;
+    display: block;
+    font-size: 1.3rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.sunsr div p span{
+    font-size: 1.3rem;
+}
+.cls-1 {
+    fill: none;
+}
+
+@media (max-width : 768px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .main1{
+        position: unset;
+        width: 90%;
+        padding: 1rem 1.5rem;
+    }
+    .inputEle input{
+        font-size: 1.4rem;
+        padding-left: .4rem;
+    }
+    .data{
+        height: 30rem;
+    }
+    .main2{
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .highlight{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
+    .sunsr div p{
+        font-size: 1.75rem;
+    }
+    .forecast{
+        grid-template-columns: repeat(3,1fr);
+        line-height: 1.2;
+    }
+    .boxForcast{
+        height: 250px;
+        padding: .3rem 0;
+        width: auto;
+    }
+    .boxForcast div{
+        width: 5rem;
+        height: 5rem;
+        margin-top: -3px;
+    }
+    .boxForcast h4{
+        padding-top: .3rem;
+        font-size: 110%;
+    }
+    .boxForcast h5{
+        padding-bottom: .3rem;
+        font-size: 110%;
+    }
+    .sunsr div p{
+        text-align: center;
+    }
+}
+
+@media (max-width : 445px) {
+    .inputEle{
+        height: 3rem;
+    }
+    .inputEle input{
+        font-size: 1.2rem;
+        padding-left: .4rem;
+    }
+    .sunsr div p{
+        width: auto;
+        font-size: 1rem;
+    }
+    .box,
+    .boxForcast{
+        height: 150px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .box h4,
+    .sunsr div p span{
+        font-size: 1rem;
+        font-weight: 900;
+    }
+    .box svg {
+        height: 58px;
+    }
+    .box h2{
+        font-size: 1rem;
+        font-weight: 900;
+    }
+    .forecast{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .boxForcast{
+        height: 250px;
+    }
+}
