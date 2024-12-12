@@ -104,7 +104,7 @@ function getWeather(){
                 temp : checkTemp(metricData.main.temp),
                 feels_like :"Feels Like " + checkTemp(metricData.main.feels_like),
                 feel : metricData.weather[0].description,
-                date :`${getDay(metricData.dt, metricData.timezone)}, ${getDate(metricData.dt, metricData.timezone)} at ${getTime(metricData.dt, metricData.timezone)}`
+                date :`${getDay(metricData.dt-23400, metricData.timezone)}, ${getDate(metricData.dt-23400, metricData.timezone)} at ${getTime(metricData.dt-23400, metricData.timezone)}`
             });
             updateHighLight({
               sunrise : getTime(metricData.sys.sunrise, metricData.timezone),
