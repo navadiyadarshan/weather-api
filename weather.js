@@ -107,8 +107,8 @@ function getWeather(){
                 date :`${getDay(metricData.dt-23400, metricData.timezone)}, ${getDate(metricData.dt-23400, metricData.timezone)} at ${getTime(metricData.dt-23400, metricData.timezone)}`
             });
             updateHighLight({
-              sunrise : getTime(metricData.sys.sunrise, metricData.timezone),
-              sunset : getTime(metricData.sys.sunset, metricData.timezone),
+              sunrise : getTime(metricData.sys.sunrise-23400, metricData.timezone),
+              sunset : getTime(metricData.sys.sunset-23400, metricData.timezone),
               humidity : metricData.main.humidity + "%",
               windSpeed : metricData.wind.speed + " KM/h",
               clouds : metricData.clouds.all + "%",
